@@ -1,0 +1,13 @@
+[Unit]
+Description=SBC Weather Grabber
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/sbc-weather-grabber/weather_grabber
+EnvironmentFile=/opt/sbc-weather-grabber/app.env
+Restart=always
+User=ibaibur
+
+[Install]
+WantedBy=multi-user.target

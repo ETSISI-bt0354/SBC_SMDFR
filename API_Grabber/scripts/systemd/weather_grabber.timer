@@ -1,0 +1,10 @@
+[Unit]
+Description=Run SBC Weather Grabber periodically
+
+[Timer]
+Unit=weather_grabber.service
+OnBootSec=5min
+OnUnitActiveSec=1h
+
+[Install]
+WantedBy=timers.target
